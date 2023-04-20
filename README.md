@@ -45,12 +45,8 @@ CM = 30/2
 
 CM = 15 (Verificado!)   
 
-Confira manualmente se funciona para outras dimensões ímpares.
+##Confira manualmente se funciona para outras dimensões ímpares.
   
-  Bons Estudos! 
-     
-     Marcelo Brito.
+  Bons Estudos!  Marcelo Brito.
 
-  Acesse: https://exatasoft.com/quadm.html (https://exatasoft.com/quadm.html) 
-          
-          e verifique online o algoritmo em javascript.
+  Acesse: https://exatasoft.com/quadm.html  e verifique online o algoritmo em javascript.
