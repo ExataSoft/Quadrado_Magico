@@ -43,4 +43,5 @@ CM = 15 (Verificado!)
      Marcelo Brito.
 
 ## Acesse: https://exatasoft.com/quadm.html (https://exatasoft.com/quadm.html) 
-            e verifique online o algoritmo.
+          
+            Verifique online o algoritmo.
