@@ -45,7 +45,7 @@ CM = 30/2
 
 CM = 15 (Verificado!)   
 
-## Confira manualmente se funciona para outras dimensões ímpares.
+Confira manualmente se funciona para outras dimensões ímpares.
   
   Bons Estudos! 
      
