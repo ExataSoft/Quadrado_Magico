@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/> 
+  <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+  <title>Quadrado Mágico de Ordem Ímpar | Algoritmo.</title>
+ 	<meta name="description" content="Um Quadrado Mágico é uma Tabela Quadrada onde a soma dos elementos em cada linha, coluna e diagonal são sempre o mesmo valor.">
+	<meta name="keywords" content="quadrado,quadrado mágico,quadrado magico , magic square, square, algoritmo quadrado magico, algorithm, square magic algorithm, magic algorithm">
+	<meta name="copyright" content="free">
+	<meta name="author" content="Prof. Marcelo de Brito Castro">
+	<meta name="email" content="profmarcelobc@gmail.com">
+	<meta http-equiv="content-language" content="PT">
+	<meta name="Charset" content="UTF-8">
+</head>  
+<body style="background-color:aqua">
+<div style="position:relative;top:auto;left:50%;transform:translate(-50%,0);text-align:center;border-width:5px;border-style:ridge;width:360px;height:auto">
+<pre style="color:rgb(40,0,53);font-weight:1000;font-size: 8px">
+                                            *                         
+   (              (              (         (  `                        
+ ( )\    (     )  )\ ) (      )  )\ )      )\))(     ) (  ( (          
+ )((_)  ))\ ( /( (()/( )(  ( /( (()/( (   ((_)()\ ( /( )\))()\  (  (   
+((_)_  /((_))(_)) ((_)|()\ )(_)) ((_)))\  (_()((_))(_)|(_))((_) )\ )\  
+ / _ \(_))(((_)_  _| | ((_|(_)_  _| |((_) |  \/  ((_)_ (()(_|_)((_|(_) 
+| (_) | || / _` / _` || '_/ _` / _` / _ \ | |\/| / _` / _` || / _/ _ \ 
+ \__\_\\_,_\__,_\__,_||_| \__,_\__,_\___/ |_|  |_\__,_\__, ||_\__\___/ 
+                                                         by Marcelo Brito.    
+</pre>
+<a style="font-size: 12px;font-weight:bolder;" href="https://www.exatasoft.com" target="_blank">Ir para ⇨ Página Principal</a>
+<span>&ensp;&ensp;</span>  
+<a style="font-size: 12px;font-weight:bolder;" href="https://cutt.ly/Quadrado_Magico" target="_blank">Acesse ⇨ Artigo no Quora</a> 
+</div>  
+<H1  style="align:center;text-align:center;font-size: 16px">Quadrado Mágico de Ordem Ímpar | Algoritmo.</H1>
+<div style="position:relative;top:auto;left:50%;transform:translate(-50%,0);text-align:center;border-width:5px;border-style:ridge;width:360px;height:auto">
+<label style="color:blue;font-size: 14px;font-weight:bolder;" for="n">Dimensão Ímpar [3 a 49]:</label>
+<style>
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+</style>  
+<input id="n" style="color:black;font-size: 14px;font-weight:bolder;" size=1 type="number" step="2" min="3" max="49" value="5" onchange="GeraTable(this.value);">
+<br><br>
+<span id="cmg" style="font-size:14px;font-weight:bolder;"></span>
+<br> 
+</div>
+<div id="quad" style="align:center;text-align:center;font-weight:bolder;font-size:12px">
+</div> 
+<br>
+   <div id="descricao" style="position:absolute;top:auto;left:50%;transform:translate(-50%,0);text-align:justify;border-width:5px;border-style:ridge;overflow:auto;width:360px;height:120px" >  
+     <h2 style="color:rgb(0,0,255);font-size: 14px">Quadrado Mágico | Descrição</h2>
+     <div style="color:rgb(0,0,0);font-weight:600;font-size:14px">
+      <p>Um Quadrado Mágico é uma Tabela ou Matriz Quadrada preenchida com valores inteiros de 1 até o número total de células.</p>
+      <p>De modo que a soma dos elementos em cada linha, em cada coluna e em cada diagonal é sempre igual a um mesmo valor.</p>
+      <p>Esse valor é chamado "Constante Mágica".<p>
+      <p>O algoritmo, abaixo declarado, dá uma solução válida para qualquer Quadrado Mágico de Ordem Ímpar.</p>
+      <p>Algoritmo:</p>
+      <p>-------------------------------------------------------------------------</p>
+      <p>1º Passo: Faça n = 1;</p> 
+      <p>2º Passo: Vá para a última coluna e insira o  valor n=1 na linha do meio;</p>
+      <p>3º Passo: Partindo da posição atual, mova uma coluna para a direita.</p>
+      <p>                Se não existir a coluna vá para a 1ª coluna, mantendo a linha atual;</p>
+      <p>4º Passo: Partindo da posição atual , mova uma linha para baixo.</p> 
+      <p>                Se não existir a linha vá para a 1ª linha, mantendo a coluna atual;</p>
+      <p>5° Passo: Faça n = n+1;</p> 
+      <p>6º Passo: Se a célula atual estiver vazia, insira o valor de n na célula</p>
+      <p>                e vá para 8°Passo,  senão continue no próximo passo (7°Passo);</p>
+      <p>7ºPasso: Vá para a célula não vazia que contêm o último valor  inserido.</p>
+      <p>               A partir desta posição mova uma coluna para a  esquerda.</p>
+      <p>                Se a coluna não existir vá para a última coluna, mantendo a linha atual.</p>
+      <p>                Insira n;</p>
+      <p>8°Passo: Se o valor de n for igual ao total de células do quadrado pare e finalize,</p>
+      <p>               senão: Retorne ao 3°Passo.</p>
+      <p>-------------------------------------------------------------------------</p>
+      <br>
+      <p>Constante Mágica para qualquer ordem (inclusive par): CM = n.(n² + 1)/2</p>  
+      <p>Exemplo: n=5</p>  
+      <p>CM = 5.(5² + 1)/2</p>  
+      <p>CM = 5.(25+1)/2</p>
+      <p>CM = 5.(26)/2</p> 
+      <p>CM = 5.13</p>
+      <p>CM = 65 (Verificado!)</p>   
+      <p>Espero que tenham gostado, confira para outras dimensões ímpares.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Boa diversão!</p> 
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Prof. Marcelo Brito.</p>
+     </div>
+   </div>    
+</body>
+<!--
+*********************************************** 
+* Script - Quadm em Javascript.               * 
+* Autor: Prof. Marcelo Brito.                 * 
+* Data : 25/03/2023                           * 
+* Sobre: script que gera um quadrado mágico   * 
+*        de ordem ímpar  usando um algoritmo  * 
+*        iterativo em javascrit.              * 
+*********************************************** 
+-->    
+<script>
+ var Q = new Array(50);
+ //Inicializa a Matriz Q com Zeros.
+ function inicializa()
+ {
+  i = 0;
+  while(i<50)
+  {
+    Q[i]= new Array(50);
+    i++; 
+  }  
+ 
+  i=0;
+  while(i<50)
+  { j=0;
+    while(j<50)
+      {
+        Q[i][j]=0;
+        j++; 
+      }
+    i++; 
+  }
+ }    
+              
+ function pdireita(i,j,n)
+ {
+   if(j<n-1) 
+     return j+1;
+   else
+     return 0;
+ }
+
+ function pesquerda(i,j,n)
+ {
+   if(j>0) 
+     return j-1;
+   else
+     return n-1;
+ }
+  
+ function pbaixo(i,j,n)
+ {
+   if(i<n-1) 
+     return i+1;
+   else
+     return 0;
+ }
+
+ //Gera o Quadrado Mágico            
+ function gera(n)
+ { let i=Math.floor(n/2);
+   let j=n-1;
+   let T=n*n;
+   let x=1; 
+   Q[i][j]=1;
+   while(x<T)
+   { x++; 
+     a=i;b=j;
+     j=pdireita(i,j,n);
+     i=pbaixo(i,j,n);
+     if(Q[i][j])
+      { i=a; 
+        j=pesquerda(i,b,n);
+      } 
+     Q[i][j]=x;
+   }
+ } 
+  
+//Verifica a Constante Mágica 
+ function CMG(n)
+ { //Soma os elementos da diagonal principal(dp)
+   //Soma os elementos da diagonal secundária(ds)
+   var dp=0,ds=0; 
+   var r;
+   L = new Array(50);
+   C = new Array(50);
+   var i=0,j=0;
+   while(i<n)
+   {
+     dp+=Q[i][i];
+     ds+=Q[i][n-i-1];
+     i++;
+   }
+  if(dp!=ds) r=-1;
+  else
+  { r=dp;
+  i=0;
+  //Soma os elementos de cada linha(L)            
+  while(r>0&&i<n)
+    { L[i]=0;j=0; 
+      while(j<n)
+       { L[i]+=Q[i][j];
+         j++;
+       }
+    if(L[i]!=dp){r= -1; break;};
+     i++;
+    }
+  j=0;
+  //Soma os elementos de cada coluna(C)
+  while(r>0&&j<n)
+    { C[j]=0;i=0; 
+      while(i<n)
+       { C[j]+=Q[i][j];
+         i++;
+       }
+     if(C[j]!=dp){r= -1; break;};
+     j++;
+    }
+ }
+  //Se todas as somas tiveram o mesmo valor
+  // retorna a constante mágica = soma
+  //Senão retorna -1 (inválido) 
+  return r;
+ }
+ 
+ // Gera uma tabela(table) em HTML a partir da Matriz Q
+ function GeraTable(n)
+ { 
+   if (!(n%2))
+      document.getElementById('quad').innerHTML='A ordem deve ser Ímpar!';
+   else
+  {      
+   document.getElementById('quad').innerHTML='';
+   inicializa(); 
+   gera(n); 
+   i=0; 
+   tab='<table border="7" style="font-size:12px;position:relative;top:10px; left:50%; transform:translate(-50%,0);background-color:white; border-color:gray gray gray gray;">';
+   while(i<n)
+   {
+      l='<tr align="center">';
+      j=0;
+      while(j<n)
+      { x = Q[i][j];
+       s=x.toString();
+       if(s.length<2) s='&nbsp;'+s+'&nbsp;';
+       l=l+'<td align="center" style="border:2px solid black;">'+s+'</td>';
+       j++;
+      } 
+    l=l+'</tr>';
+    tab=tab+l;
+   i++;
+  }
+  tab+='</table>';
+  k = CMG(n);
+  if(k>0)
+   {
+     cmg ='Constante Mágica = '+CMG(n).toString()+' - Verificada!';
+     document.getElementById('cmg').innerHTML=cmg;
+   }
+  document.getElementById('quad').innerHTML+=tab; 
+ }
+ document.getElementById('descricao').scrollTop=0;    
+}
+if(document.getElementById('n').value==="5") 
+  {GeraTable(5);};
+</script>
+</html>
