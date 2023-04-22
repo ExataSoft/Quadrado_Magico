@@ -49,4 +49,6 @@ Confira manualmente se funciona para outras dimensões ímpares.
   
 ## Bons Estudos!  Marcelo Brito.
 
-  Acesse: https://exatasoft.com/quadm.html  e verifique online o algoritmo em javascript.
+  Acesse : https://exatasoft.com/quadm.html  e verifique online o algoritmo em javascript.
+  WebSite: https://exatasoft.com
+  
