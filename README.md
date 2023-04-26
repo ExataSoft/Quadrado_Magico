@@ -1,4 +1,10 @@
 # Quadrado Mágico de Ordem Ímpar | JavaScript
+<p align="center">
+<img src="https://repository-images.githubusercontent.com/630443785/1c9926e4-cb29-4865-b129-b720ce951c14" alt="Quadrado Mágico de Ordem Ímpar | JavaScript"/>
+<p/>
+
+<h4 align="center">O algoritmo, abaixo declarado, dá uma solução válida para qualquer Quadrado Mágico de Ordem Ímpar.</h4>
+
 
 Um Quadrado Mágico é uma Tabela ou Matriz Quadrada preenchida com valores inteiros de 1 até o número total de células.
 De modo que a soma dos elementos em cada linha, em cada coluna e em cada diagonal é sempre igual a um mesmo valor.
